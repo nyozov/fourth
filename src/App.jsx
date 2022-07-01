@@ -11,9 +11,9 @@ function App() {
   const [lightMode, setLightMode] = useState("light");
   return (
     <div className={lightMode}>
-      <Navbar />
-      <LightButton lightMode={lightMode} setLightMode={setLightMode}/>
-      <div className="">
+      <Navbar lightMode={lightMode}/>
+      <LightButton lightMode={lightMode} setLightMode={setLightMode} />
+      <div className="bg-white dark:bg-black min-h-screen duration-150">
         <Routes>
           <Route path="/" element={<CenterImg title="Nick Yozov" />} />
           <Route path="/projects" element={<Projects title="Projects" />} />

@@ -26,7 +26,7 @@ const NavContent = () => (
     </ul>
   </div>
 );
-function Navbar() {
+function Navbar({lightMode}) {
   const spring = {
     type: "spring",
     damping: 15,
@@ -43,7 +43,7 @@ function Navbar() {
       </div>
 
       {/* mobile */}
-      <div className="text-black dark:text-gray-200 z-30 bg-black  absolute top-0 sm:hidden">
+      <div className="text-black dark:text-gray-200 z-30 dark:bg-black  absolute top-0 sm:hidden">
         <div
           id="bgIcon"
           onClick={() => setShow(!show)}
@@ -54,20 +54,20 @@ function Navbar() {
             width={24}
             height={24}
             viewBox="0 0 24 24"
-            fill="#000"
+            fill={lightMode==="dark" ? `#FFF` : `#000`}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               className=" transform duration-150"
               d="M4 6H20"
-              stroke="#000"
+              stroke={lightMode==="dark" ? `#FFF` : `#000`}
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M4 12H20"
-              stroke="#000"
+              stroke={lightMode==="dark" ? `#FFF` : `#000`}
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -75,7 +75,7 @@ function Navbar() {
             <path
               className=" transform duration-150"
               d="M4 18H20"
-              stroke="#000"
+              stroke={lightMode==="dark" ? `#FFF` : `#000`}
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -86,19 +86,19 @@ function Navbar() {
             width={24}
             height={24}
             viewBox="0 0 24 24"
-            fill="#000"
+            fill={lightMode==="dark" ? `#FFF` : `#000`}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M18 6L6 18"
-              stroke="#000"
+              stroke={lightMode==="dark" ? `#FFF` : `#000`}
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M6 6L18 18"
-              stroke="#000"
+              stroke={lightMode==="dark" ? `#FFF` : `#000`}
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -116,7 +116,7 @@ function Navbar() {
               id="MobileNavigation"
               className={`${
                 show ? "block absolute top-0" : "hidden"
-              } sm:hidden shadow-lg p-6 mx-auto bg-white h-screen`}
+              } sm:hidden shadow-lg p-6 mx-auto bg-white dark:bg-[rgba(0,0,0,0.5)] dark:backdrop-blur h-screen`}
             >
               <NavContent />
             </motion.div>

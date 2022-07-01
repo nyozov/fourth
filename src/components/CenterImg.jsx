@@ -85,7 +85,7 @@ function CenterImg({title}) {
       transition={{delay: 0.1, duration:0.5}}
      
       animate={{ opacity: 1 }}
-      className="flex w-full h-screen justify-center items-center duration-150 flex-col dark:bg-black"
+      className="flex w-full h-screen justify-center items-center flex-col"
     >
       <Scene/>
     
