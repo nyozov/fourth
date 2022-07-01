@@ -1,5 +1,4 @@
 import galleryImg from './assets/preview-wide.png'
-import etuneImg from './assets/etune-img.png'
 import therapifyImg from './assets/therapifyImg.png'
 import ethsendImg from './assets/ethsend-img.png'
 import schedulerImg from './assets/scheduler-img.png'

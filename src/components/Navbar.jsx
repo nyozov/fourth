@@ -2,24 +2,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavContent = () => (
+const NavContent = ({setShow}) => (
   <div className='z-50'>
     <ul className="px-16 p-8 mt-24 font-light text-gray-600 dark:text-gray-200">
-      <Link to="/">
-        <li className="cursor-pointer hover:text-gray-400 duration-150">
+      <Link to="/" >
+        <li onClick={()=>setShow(false)} className="cursor-pointer hover:text-gray-400 duration-150">
           Home
         </li>
       </Link>
-      <Link to="/projects">
-        <li className="cursor-pointer hover:text-gray-400 duration-150">
+      <Link to="/projects" >
+        <li onClick={()=>setShow(false)} className="cursor-pointer hover:text-gray-400 duration-150">
           Projects
         </li>
       </Link>
-      <Link to="/bio">
-        <li className="cursor-pointer hover:text-gray-400 duration-150">Bio</li>
+      <Link to="/bio" >
+        <li onClick={()=>setShow(false)} className="cursor-pointer hover:text-gray-400 duration-150">Bio</li>
       </Link>
       <Link to="/contact">
-        <li className="cursor-pointer hover:text-gray-400 duration-150">
+        <li onClick={()=>setShow(false)} className="cursor-pointer hover:text-gray-400 duration-150">
           Contact
         </li>
       </Link>
@@ -118,7 +118,7 @@ function Navbar({lightMode}) {
                 show ? "block absolute top-0" : "hidden"
               } sm:hidden shadow-lg p-6 mx-auto bg-white dark:bg-[rgba(0,0,0,0.5)] dark:backdrop-blur h-screen`}
             >
-              <NavContent />
+              <NavContent setShow={setShow} />
             </motion.div>
           )}
         </AnimatePresence>
