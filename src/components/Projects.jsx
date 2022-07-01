@@ -4,22 +4,43 @@ import { motion } from "framer-motion";
 
 function Projects() {
   return (
-    <div>
+    <motion.div className="mt-24">
+      
+        <h1 className='text-3xl w-full text-center font-bold'>Projects</h1>
       {myProjects.map((project) => (
-        <motion.div
-        initial={{opacity:0}}
-       
-        animate={{opacity:1}}
-        
-        className="w-full flex justify-center p-4 flex-col items-center mt-14">
+        <motion.div className="w-full flex justify-center p-4 flex-col items-center mt-10">
           <h2 className="text-left w-full md:w-1/2 text-xl font-semibold">
             {project.name}
           </h2>
-          <img className="w-full md:w-1/2 mt-1 rounded" src={project.img} />
-          <p className="w-full md:w-1/2 mt-2">{project.desc}</p>
+          <a
+            target="_blank"
+            href={project.siteUrl ? project.siteUrl : project.url}
+            className="w-full md:w-1/2 mt-1"
+          >
+            <img
+              className="cursor-pointer filter-change  rounded"
+              src={project.img}
+            />
+          </a>
+
+          <p className="w-full text-sm font-light md:w-1/2 mt-2">
+            {project.desc}
+          </p>
+          <div className="flex w-1/2 mt-2">
+            <a target="_blank" href={project.siteUrl}>
+              <button className="bg-black border border-black hover:border-white duration-150 text-white rounded p-1 shadow w-20">
+                Site
+              </button>
+            </a>
+            <a target="_blank" href={project.url}>
+              <button className="shadow p-1 ml-2 text-gray-600 rounded border border-gray-400 hover:border-black duration-150 w-20">
+                Code
+              </button>
+            </a>
+          </div>
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

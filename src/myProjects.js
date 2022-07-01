@@ -8,6 +8,7 @@ import tvhutImg from './assets/tvhut-img.png'
 
 const myProjects = [
   {
+    id: 0,
     name: "TvHut",
     badges: ["React"],
     img: tvhutImg,
@@ -16,6 +17,7 @@ const myProjects = [
     desc: "Tv show information app utilizing the movie db API to display information such as plot summary, cast, genre, trailer, and rating. Shows can be searched by title, genre, or section(trending, top rated, etc.).",
   },
   {
+    id: 1,
     name: "Gallery",
     badges: ["React", "Firebase"],
     img: galleryImg,
@@ -25,6 +27,7 @@ const myProjects = [
   },
   
   {
+    id: 2,
     name: "IP Tracker",
     badges: ["React"],
     img: 'https://github.com/nyozov/tracker/raw/master/src/assets/wide-view.png?raw=true',
@@ -34,6 +37,7 @@ const myProjects = [
   },
  
   {
+    id: 3,
     name: "Scheduler",
     badges: ["React", "Express"],
     img: schedulerImg,
@@ -41,6 +45,7 @@ const myProjects = [
     desc: "A user can book an appointment by selecing a day, selecting an open spot, typing in their name, and selecting an interviewer from a list.",
   },
   {
+    id: 4,
     name: "Therapify",
     badges: ["React", "Express"],
     img: therapifyImg,
@@ -48,15 +53,9 @@ const myProjects = [
     desc: "Tele-health service connecting a patient and a practitioner through features including a calendar for appointments, text-chat, and video-chat through WebRTC.",
   },
   {
-    name: "Tweeter",
-    badges: ["JQuery"],
-    img: "https://github.com/nyozov/tweeter/raw/master/docs/tweet_widescreen.png?raw=true",
-    url: "https://github.com/nyozov/tweeter",
-    desc: "Single-page AJAX based Twitter clone that uses jQuery, HTML5, and CSS3. A user can write a message, and it will show up on their profile.",
-  },
-  {
+    id: 5,
     name: "EthSend",
-    badges: ["React", ["Solidity"]],
+    badges: ["React", "Solidity"],
     img: ethsendImg,
     url: "https://github.com/nyozov/30test",
     desc: "Crypto send/receive dapp utilizing metamask integration",

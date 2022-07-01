@@ -1,6 +1,31 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+const NavContent = () => (
+  <div className='z-50'>
+    <ul className="px-16 p-8 mt-24 font-light text-gray-600">
+      <Link to="/">
+        <li className="cursor-pointer hover:text-gray-400 duration-150">
+          Home
+        </li>
+      </Link>
+      <Link to="/projects">
+        <li className="cursor-pointer hover:text-gray-400 duration-150">
+          Projects
+        </li>
+      </Link>
+      <Link to="/bio">
+        <li className="cursor-pointer hover:text-gray-400 duration-150">Bio</li>
+      </Link>
+      <Link to="/contact">
+        <li className="cursor-pointer hover:text-gray-400 duration-150">
+          Contact
+        </li>
+      </Link>
+    </ul>
+  </div>
+);
 function Navbar() {
   const spring = {
     type: "spring",
@@ -13,33 +38,16 @@ function Navbar() {
   return (
     <div>
       {/* medium and large screen */}
-      <div className="hidden sm:block fixed left-0 top-0 h-full">
-        <Link to="/">
-          <h2 className="p-8 px-16 text-3xl mt-10 cursor-pointer">
-            Nick Yozov
-          </h2>
-        </Link>
-        <ul className="px-16 p-8  text-gray-600">
-          <Link to="/projects">
-            <li className="cursor-pointer hover:text-gray-400 duration-150">
-              Projects
-            </li>
-          </Link>
-          <li className="cursor-pointer hover:text-gray-400 duration-150">
-            Bio
-          </li>
-          <li className="cursor-pointer hover:text-gray-400 duration-150">
-            Contact
-          </li>
-        </ul>
+      <div className="hidden sm:block fixed z-50 left-0 top-0 h-full">
+        <NavContent />
       </div>
 
       {/* mobile */}
-      <div className="text-black bg-black absolute top-0 sm:hidden">
+      <div className="text-black z-30 bg-black absolute top-0 sm:hidden">
         <div
           id="bgIcon"
           onClick={() => setShow(!show)}
-          className={`focus:outline-none absolute top-0 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
+          className={`focus:outline-none text-gray-600 absolute top-2 left-2 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
         >
           <svg
             className={`${show ? "hidden" : ""}`}
@@ -108,22 +116,9 @@ function Navbar() {
               id="MobileNavigation"
               className={`${
                 show ? "block absolute top-0" : "hidden"
-              } sm:hidden p-6 mt-4 mx-auto bg-white h-screen`}
+              } sm:hidden shadow-lg p-6 mt-4 mx-auto bg-white h-screen`}
             >
-              <h2 className="p-8 px-16 text-3xl mt-10 cursor-pointer">
-                Nick Yozov
-              </h2>
-              <ul className="px-16 p-8  text-gray-600">
-                <li className="cursor-pointer hover:text-gray-400 duration-150">
-                  Projects
-                </li>
-                <li className="cursor-pointer hover:text-gray-400 duration-150">
-                  Bio
-                </li>
-                <li className="cursor-pointer hover:text-gray-400 duration-150">
-                  Contact
-                </li>
-              </ul>
+              <NavContent />
             </motion.div>
           )}
         </AnimatePresence>

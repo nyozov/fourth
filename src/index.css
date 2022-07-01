@@ -11,9 +11,21 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text-shadow{
+  text-shadow: 0.2px 0.2px 5px rgba(0,0,0,0.3);
+
+}
+
+.filter-change:hover{
+  filter: contrast(120%) brightness(90%);
+}
+  
+
