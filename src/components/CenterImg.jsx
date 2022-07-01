@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import * as THREE from "three";
-import React, { useRef, Suspense } from "react";
+import { useRef, Suspense, useEffect } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
@@ -66,29 +66,31 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas className='-z-10 w-[75vw] h-[75vh] border' camera={{ fov: 12, position: [0, 0, 5] }}>
+    <Canvas className='' camera={{ fov: 12, position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <Wave />
       </Suspense>
     </Canvas>
   );
 };
-function CenterImg() {
+function CenterImg({title}) {
+  useEffect(() => {
+
+    document.title = title
+   
+  }, [title])
   return (
     <motion.div
       initial={{ opacity: 0 }}
       transition={{delay: 0.1, duration:0.5}}
      
       animate={{ opacity: 1 }}
-      className="flex w-full h-screen justify-center items-center flex-col"
+      className="flex w-full h-screen justify-center items-center duration-150 flex-col dark:bg-black"
     >
       <Scene/>
-      {/* <img
-        className="md:w-3/4 md:h-3/4 object-contain"
-        src="https://static.wixstatic.com/media/21b326_4367d433974440088fb267ae3aee08a3~mv2_d_4676_4679_s_4_2.jpg/v1/fill/w_934,h_871,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/21b326_4367d433974440088fb267ae3aee08a3~mv2_d_4676_4679_s_4_2.jpg"
-      /> */}
+    
       <h2 className="absolute font-light text-center text-white text-shadow text-xl p-4">
-       <span className='text-black'> Nick Yo</span>zov, Full Stack Developer & UI/UX D<span className='text-black'>
+       <span className='text-black dark:text-white'> Nick Yo</span>zov, Full Stack Developer & UI/UX D<span className='text-black dark:text-white'>
          esigner
          </span>
       </h2>

@@ -3,22 +3,23 @@ import CenterImg from "./components/CenterImg";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Biography from "./components/Biography"
-import { Routes, Route} from "react-router-dom";
+import Biography from "./components/Biography";
+import LightButton from "./components/LightButton";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 function App() {
+  const [lightMode, setLightMode] = useState("light");
   return (
-    <div className="App">
-   
+    <div className={lightMode}>
       <Navbar />
-      <div className=''>
-      <Routes>
-        <Route path='/' element={<CenterImg />}/>
-        <Route path='/projects' element={<Projects />}/>
-        <Route path='/contact' element={<Contact />}/>
-        <Route path='/bio' element={<Biography />}/>
-
-      </Routes>
-
+      <LightButton lightMode={lightMode} setLightMode={setLightMode}/>
+      <div className="">
+        <Routes>
+          <Route path="/" element={<CenterImg title="Nick Yozov" />} />
+          <Route path="/projects" element={<Projects title="Projects" />} />
+          <Route path="/contact" element={<Contact title="Contact" />} />
+          <Route path="/bio" element={<Biography title="Biography" />} />
+        </Routes>
       </div>
     </div>
   );

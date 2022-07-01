@@ -1,14 +1,29 @@
-import React from "react";
-import myProjects from "../myProjects";
 import { motion } from "framer-motion";
+import myProjects from "../myProjects";
+import { useEffect } from "react";
 
-function Projects() {
+function Projects({title}) {
+  useEffect(() => {
+
+    document.title = title
+   
+  }, [title])
   return (
-    <motion.div className="mt-24">
-      
-        <h1 className='text-3xl w-full text-center font-bold'>Projects</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ delay: 0.1, duration: 0.5 }}
+      animate={{ opacity: 1 }}
+      className="mt-24"
+    >
+      <h1 className="text-3xl w-full text-center font-bold">Projects</h1>
       {myProjects.map((project) => (
-        <motion.div className="w-full flex justify-center p-4 flex-col items-center mt-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="w-full flex justify-center p-4 flex-col items-center mt-10"
+        >
           <h2 className="text-left w-full md:w-1/2 text-xl font-semibold">
             {project.name}
           </h2>

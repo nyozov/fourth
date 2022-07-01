@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavContent = () => (
   <div className='z-50'>
-    <ul className="px-16 p-8 mt-24 font-light text-gray-600">
+    <ul className="px-16 p-8 mt-24 font-light text-gray-600 dark:text-gray-200">
       <Link to="/">
         <li className="cursor-pointer hover:text-gray-400 duration-150">
           Home
@@ -43,11 +43,11 @@ function Navbar() {
       </div>
 
       {/* mobile */}
-      <div className="text-black z-30 bg-black absolute top-0 sm:hidden">
+      <div className="text-black dark:text-gray-200 z-30 bg-black  absolute top-0 sm:hidden">
         <div
           id="bgIcon"
           onClick={() => setShow(!show)}
-          className={`focus:outline-none text-gray-600 absolute top-2 left-2 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
+          className={`focus:outline-none text-gray-600 z-40 absolute top-5 left-3 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
         >
           <svg
             className={`${show ? "hidden" : ""}`}
@@ -116,7 +116,7 @@ function Navbar() {
               id="MobileNavigation"
               className={`${
                 show ? "block absolute top-0" : "hidden"
-              } sm:hidden shadow-lg p-6 mt-4 mx-auto bg-white h-screen`}
+              } sm:hidden shadow-lg p-6 mx-auto bg-white h-screen`}
             >
               <NavContent />
             </motion.div>

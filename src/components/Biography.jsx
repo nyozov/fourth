@@ -1,10 +1,33 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { useEffect } from 'react'
 
-function Biography() {
+function Biography({title}) {
+
+  useEffect(() => {
+
+    document.title = title
+   
+  }, [title])
+  
   return (
-    <div className="w-full  flex flex-col justify-center items-center mt-24">
-      <h1 className='text-3xl font-bold'>Biography</h1>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ delay: 0.1, duration: 0.5 }}
+      animate={{ opacity: 1 }}
+      className="w-full  flex flex-col justify-center items-center mt-24"
+    >
+      <h1 className="text-3xl font-bold">Biography</h1>
+      <div className='w-1/2 mt-5'>
+        <p className='text-sm font-light text-gray-600'>
+          {" "}
+          Hi I'm Nick 👋, a detail-oriented web developer with over a year of
+          experience and a passion for creating, optimizing, and improving web
+          applications. Based out of Toronto, I am a recent web development
+          bootcamp graduate ready to take the next step and work with industry
+          professionals.
+        </p>
+      </div>
+    </motion.div>
   );
 }
 

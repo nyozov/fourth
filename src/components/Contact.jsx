@@ -1,14 +1,22 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
+import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Contact({title}) {
   const [charNumber, setCharNumber] = useState(200);
   const [formResults, setFormResults] = useState({
     name: "",
     message: "",
   });
+
+  useEffect(() => {
+
+    document.title = title
+   
+  }, [title])
+  
   const [flag, setFlag] = useState(false);
   const handleWordCount = (e) => {
     const charCount = e.target.value.length;
@@ -56,11 +64,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative z-10">
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ delay: 0.1, duration: 0.5 }}
+      animate={{ opacity: 1 }}
+      className="relative z-10"
+    >
       {!flag && (
         <div className="w-full  flex flex-col justify-center items-center mt-24">
           <h1 className="text-3xl font-bold">Contact Info</h1>
-          <div className='flex pt-6 justify-between items-center'>
+          <div className="flex pt-6 justify-between items-center">
             <a href="https://github.com/nyozov" target="_blank">
               <div className="text-black border hover:border-gray-600 duration-150 cursor-pointer p-[2px] rounded">
                 <AiFillGithub size={36} />
@@ -157,6 +170,6 @@ export default function Contact() {
           </form>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
