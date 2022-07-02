@@ -24,13 +24,13 @@ function Projects({ title }) {
           viewport={{ once: true }}
           className="w-full flex justify-center p-4 flex-col items-center mt-10"
         >
-          <h2 className="text-left w-full md:w-1/2 text-xl dark:text-gray-300 font-semibold">
+          <h2 className="text-left w-full sm:w-5/12 text-xl dark:text-gray-300 font-semibold">
             {project.name}
           </h2>
           <a
             target="_blank"
             href={project.siteUrl ? project.siteUrl : project.url}
-            className="w-full md:w-1/2 mt-1"
+            className="w-full sm:w-5/12 mt-1"
           >
             <img
               className="cursor-pointer filter-change  rounded"
@@ -38,17 +38,17 @@ function Projects({ title }) {
             />
           </a>
 
-          <p className="w-full text-sm font-light md:w-1/2 dark:text-gray-300 mt-2">
+          <p className="w-full text-sm font-light sm:w-5/12 dark:text-gray-300 mt-2">
             {project.desc}
           </p>
-          <div className="flex w-1/2 mt-2">
+          <div className="flex w-full sm:w-5/12 mt-2">
             <a target="_blank" href={project.siteUrl}>
-              <button className="bg-black border dark:bg-white dark:text-black border-black hover:border-white duration-150 text-white rounded p-1 shadow w-20">
+              <button className="bg-black border dark:bg-white dark:text-black border-black hover:border-white duration-150 text-white rounded sm:p-[3px] p-1 shadow w-20 sm:w-16">
                 Site
               </button>
             </a>
             <a target="_blank" href={project.url}>
-              <button className="shadow p-1 ml-2 text-gray-600 dark:text-gray-200 rounded border border-gray-400 hover:border-black dark:hover:border-white duration-150 w-20">
+              <button className="ml-2 text-gray-600 dark:text-gray-200 rounded border border-gray-400 hover:border-black dark:hover:border-white duration-150 sm:p-[3px] p-1 shadow w-20 sm:w-16">
                 Code
               </button>
             </a>

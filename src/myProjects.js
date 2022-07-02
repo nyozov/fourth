@@ -3,7 +3,7 @@ import therapifyImg from './assets/therapifyImg.png'
 import ethsendImg from './assets/ethsend-img.png'
 import schedulerImg from './assets/scheduler-img.png'
 import tvhutImg from './assets/tvhut-img.png'
-
+import trackerImg from './assets/tracker-img.png'
 
 const myProjects = [
   {
@@ -29,7 +29,7 @@ const myProjects = [
     id: 2,
     name: "IP Tracker",
     badges: ["React"],
-    img: 'https://github.com/nyozov/tracker/raw/master/src/assets/wide-view.png?raw=true',
+    img: trackerImg,
     url: "https://github.com/nyozov/tracker",
     siteUrl: "https://iptrackertest.netlify.app/",
     desc: "IP tracking app where a user can enter an IP address, and recieve the location, timezone, and ISP. A map of the location can also be seen through Leaflet,",

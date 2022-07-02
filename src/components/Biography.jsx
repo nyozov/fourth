@@ -17,7 +17,7 @@ function Biography({title}) {
       className="w-full h-screen flex flex-col items-center  dark:bg-black"
     >
       <h1 className="text-3xl font-bold mt-24 dark:text-gray-200">Biography</h1>
-      <div className='w-1/2 mt-5'>
+      <div className='w-3/4 sm:w-1/2 mt-5'>
         <p className='text-sm font-light text-gray-600 dark:text-gray-300'>
           {" "}
           Hi I'm Nick 👋, a detail-oriented web developer with over a year of
