@@ -68,10 +68,10 @@ export default function Contact({title}) {
       initial={{ opacity: 0 }}
       transition={{ delay: 0.1, duration: 0.5 }}
       animate={{ opacity: 1 }}
-      className="relative"
+      className="relative h-screen "
     >
       {!flag && (
-        <div className="w-full  flex flex-col justify-center items-center pt-24">
+        <div className="w-full flex flex-col justify-center items-center pt-24">
           <h1 className="text-3xl font-bold dark:text-gray-200">Contact Info</h1>
           <div className="flex pt-6 justify-between items-center">
             <a href="https://github.com/nyozov" target="_blank">
