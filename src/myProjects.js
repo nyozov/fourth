@@ -32,7 +32,7 @@ const myProjects = [
     img: trackerImg,
     url: "https://github.com/nyozov/tracker",
     siteUrl: "https://iptrackertest.netlify.app/",
-    desc: "IP tracking app where a user can enter an IP address, and recieve the location, timezone, and ISP. A map of the location can also be seen through Leaflet,",
+    desc: "IP tracking app where a user can enter an IP address, and recieve the location, timezone, and ISP. Am interactive map of the location is also displayed through the Leaflet JS library.",
   },
  
   {
@@ -57,7 +57,7 @@ const myProjects = [
     badges: ["React", "Solidity"],
     img: ethsendImg,
     url: "https://github.com/nyozov/30test",
-    desc: "Crypto send/receive dapp utilizing metamask integration",
+    desc: "Crypto send/receive dapp utilizing metamask integration. A user can send Ether through the Ropsten network and include a message and gif with the ",
   },
   
  

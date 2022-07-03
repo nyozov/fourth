@@ -30,7 +30,7 @@ function Biography({ title }) {
           , frontend on  <a className="text-blue-400" target="_blank" href="https://www.frontendmentor.io/profile/nyozov">
              FrontedMentor
           </a>
-          , or creating the projects that you see here or on my github.
+          , or creating the projects that can be seen here or on my github.
           </p>
       </div>
     </motion.div>
