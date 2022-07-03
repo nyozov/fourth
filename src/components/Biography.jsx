@@ -17,11 +17,10 @@ function Biography({ title }) {
       <div className="w-3/4 sm:w-1/2 mt-5">
         <p className="text-sm font-light text-gray-600 dark:text-gray-300">
           {" "}
+          Full stack developer, documentation reader, div centerer.
           Hi I'm Nick 👋, a detail-oriented web developer with over a year of
           experience and a passion for creating, optimizing, and improving web
-          applications. Based out of Toronto, I am a recent web development
-          bootcamp graduate ready to take the next step and work with industry
-          professionals.
+          applications. 
         </p>
         <br />
         <p className="text-sm font-light text-gray-600 dark:text-gray-300">

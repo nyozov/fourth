@@ -89,10 +89,9 @@ function CenterImg({title}) {
     >
       <Scene/>
     
-      <h2 className="absolute font-light text-center text-white text-shadow text-xl p-4">
-       <span className='sm:text-black dark:text-white'> Nick Yo</span>zov, Full Stack Developer & UI/UX D<span className='sm:text-black dark:text-white'>
-         esigner
-         </span>
+      <h2 className="text-blend absolute font-light text-center duration-150 text-white text-shadow text-xl p-4">
+       Nick Yozov, Full Stack Developer & UI/UX Designer
+        
       </h2>
     </motion.div>
   );
