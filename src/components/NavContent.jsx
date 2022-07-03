@@ -15,7 +15,7 @@ export default function NavContent({ setShow }) {
         <Link to="/projects">
           <li
             onClick={() => setShow(false)}
-            className="cursor-pointer hover:text-gray-400 duration-150"
+            className="cursor-pointer hover:text-gray-400 duration-150 arrow-end"
           >
             Projects
           </li>

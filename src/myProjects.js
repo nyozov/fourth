@@ -57,7 +57,7 @@ const myProjects = [
     badges: ["React", "Solidity"],
     img: ethsendImg,
     url: "https://github.com/nyozov/30test",
-    desc: "Crypto send/receive dapp utilizing metamask integration. A user can send Ether through the Ropsten network and include a message and gif with the ",
+    desc: "Crypto send/receive dapp utilizing metamask integration. A user can send Ether through the Ropsten network and additionally include a message and GIF. ",
   },
   
  
