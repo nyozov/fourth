@@ -24,7 +24,7 @@ function Navbar({lightMode}) {
         <div
           id="bgIcon"
           onClick={() => setShow(!show)}
-          className={`focus:outline-none text-gray-600 z-40 absolute top-5 left-3 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
+          className={`focus:outline-none text-gray-600 z-40 ${show ? `fixed` : `absolute`} top-5 left-3 focus:ring-2 p-[2px] rounded hover:shadow-2xl focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}
         >
           <svg
             className={`${show ? "hidden" : ""}`}
