@@ -70,7 +70,8 @@ function Biography({ title, lightMode }) {
         </p>
         <br/>
         <p className="text-sm font-light text-gray-600 dark:text-gray-300">
-          I am constantly learning, 
+          I specialize in the MERN stack, however I am always curious, and look to challenge myself by trying out different languages,
+           frameworks, and libraries.  
           </p>
         {isHovering && (
           <div className="hidden sm:block bg-white">
