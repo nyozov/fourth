@@ -26,7 +26,10 @@ function App() {
           <Route path="/" element={<CenterImg title="Nick Yozov" />} />
           <Route path="/projects" element={<Projects title="Projects" />} />
           <Route path="/contact" element={<Contact title="Contact" />} />
-          <Route path="/bio" element={<Biography title="Biography" lightMode={lightMode}/>} />
+          <Route
+            path="/bio"
+            element={<Biography title="Biography" lightMode={lightMode} />}
+          />
         </Routes>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Index = ({ flag, setFlag }) => {
     >
       <div role="alert" className="w-9/12 sm:w-7/12 rounded">
         <div className="border border-gray-100 rounded duration-150 dark:border-gray-800">
-          <div className="sm:px-6 p-2 flex mt-4 sm:mt-0 ml-4 sm:ml-0 items-center justify-center bg-green-400 sm:rounded-tl sm:rounded-tr w-12 h-12 sm:h-auto sm:w-auto text-white">
+          <div className="sm:px-6 p-2 flex mt-4 sm:mt-0 ml-2 sm:ml-0 items-center justify-center bg-green-400 sm:rounded-tl sm:rounded-tr w-12 h-12 sm:h-auto sm:w-auto text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -33,12 +33,12 @@ const Index = ({ flag, setFlag }) => {
           </p>
 
           <div
-            className="border border-transparent hover:border-gray-400 rounded-bl rounded-br text-gray-600 hover:text-gray-700 duration-150 dark:text-gray-400 dark:hover:text-gray-100 sm:pt-4 pb-4 flex justify-center items-center w-full cursor-pointer"
+            className="border border-transparent hover:border-gray-400 rounded-bl rounded-br text-gray-600 hover:text-gray-700 duration-150 dark:text-gray-400 dark:hover:text-gray-100 p-4 flex justify-center items-center w-full cursor-pointer"
             onClick={() => setFlag(false)}
           >
-            <span className="mt-2 md:mt-0 text-center flex items-center sm:text-sm text-xs  cursor-pointer">
+            
               Dismiss
-            </span>
+   
           </div>
         </div>
       </div>

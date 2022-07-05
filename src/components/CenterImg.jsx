@@ -1,11 +1,10 @@
-
 import { motion } from "framer-motion";
 import * as THREE from "three";
 import { useRef, Suspense, useEffect } from "react";
 import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
-
+import Footer from "./Footer";
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
@@ -54,7 +53,8 @@ const Wave = () => {
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
 
   const [image] = useLoader(THREE.TextureLoader, [
-"https://images.pexels.com/photos/2317711/pexels-photo-2317711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]);
+    "https://images.pexels.com/photos/2317711/pexels-photo-2317711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  ]);
 
   return (
     <mesh>
@@ -66,33 +66,32 @@ const Wave = () => {
 
 const Scene = () => {
   return (
-    <Canvas className='' camera={{ fov: 12, position: [0, 0, 5] }}>
+    <Canvas camera={{ fov: 12, position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <Wave />
       </Suspense>
     </Canvas>
   );
 };
-function CenterImg({title}) {
-  useEffect(() => {
 
-    document.title = title
-   
-  }, [title])
+function CenterImg({ title }) {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      transition={{delay: 0.1, duration:0.5}}
-     
+      transition={{ delay: 0.1, duration: 0.5 }}
       animate={{ opacity: 1 }}
       className="flex w-full h-screen justify-center items-center flex-col"
     >
-      <Scene/>
-    
+      <Scene />
+
       <h2 className="text-blend absolute font-light text-center duration-150 text-white text-shadow text-xl p-4">
-       Nick Yozov, Full Stack Developer & UI/UX Designer
-        
+        Nick Yozov, Full Stack Developer & UI/UX Designer
       </h2>
+      <Footer absolute/>
     </motion.div>
   );
 }

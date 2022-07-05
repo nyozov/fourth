@@ -4,6 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Notification from "./Notification";
+import Footer from "./Footer";
 export default function Contact({ title }) {
   const [charNumber, setCharNumber] = useState(200);
   const [formResults, setFormResults] = useState({
@@ -157,7 +158,7 @@ export default function Contact({ title }) {
 
   
         {flag && <Notification flag={flag} setFlag={setFlag} />}
-     
+     <Footer absolute/>
     </motion.div>
   );
 }

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import CurvedArrow from "react-curved-arrow";
-
+import Footer from "./Footer";
 function Biography({ title, lightMode }) {
+  //arrow on hover
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {
@@ -67,6 +68,10 @@ function Biography({ title, lightMode }) {
           </a>
           .
         </p>
+        <br/>
+        <p className="text-sm font-light text-gray-600 dark:text-gray-300">
+          I am constantly learning, 
+          </p>
         {isHovering && (
           <div className="hidden sm:block bg-white">
             <CurvedArrow
@@ -84,6 +89,7 @@ function Biography({ title, lightMode }) {
           </div>
         )}
       </div>
+      <Footer absolute/>
     </motion.div>
   );
 }

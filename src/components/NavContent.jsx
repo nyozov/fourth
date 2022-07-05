@@ -7,7 +7,7 @@ export default function NavContent({ setShow }) {
         <Link to="/">
           <li
             onClick={() => setShow(false)}
-            className="cursor-pointer hover:text-gray-400 duration-150"
+            className="cursor-pointer p-1 sm:p-0 hover:text-gray-400 duration-150"
           >
             Home
           </li>
@@ -15,7 +15,7 @@ export default function NavContent({ setShow }) {
         <Link to="/projects">
           <li
             onClick={() => setShow(false)}
-            className="cursor-pointer hover:text-gray-400 duration-150 arrow-end"
+            className="cursor-pointer p-1 sm:p-0 hover:text-gray-400 duration-150 arrow-end"
           >
             Projects
           </li>
@@ -23,15 +23,15 @@ export default function NavContent({ setShow }) {
         <Link to="/bio">
           <li
             onClick={() => setShow(false)}
-            className="cursor-pointer hover:text-gray-400 duration-150"
+            className="cursor-pointer p-1 sm:p-0 hover:text-gray-400 duration-150"
           >
-            Bio
+            Biography
           </li>
         </Link>
         <Link to="/contact">
           <li
             onClick={() => setShow(false)}
-            className="cursor-pointer hover:text-gray-400 duration-150"
+            className="cursor-pointer p-1 sm:p-0 hover:text-gray-400 duration-150"
           >
             Contact
           </li>
