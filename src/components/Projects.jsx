@@ -12,7 +12,7 @@ function Projects({ title }) {
       initial={{ opacity: 0 }}
       transition={{ delay: 0.1, duration: 0.5 }}
       animate={{ opacity: 1 }}
-      className=""
+      className="flex justify-center flex-col items-center"
     >
       <h1 className=" text-3xl w-full pt-24 text-center font-bold dark:text-gray-200">
         Projects
@@ -24,11 +24,8 @@ function Projects({ title }) {
             transition={{ delay: 0.1, duration: 0.8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full flex justify-center p-4 flex-col items-center mt-10"
+            className=" flex justify-center p-4 flex-col items-center mt-10"
           >
-            <h2 className="text-left w-full sm:w-5/12 text-xl dark:text-gray-300 font-semibold">
-              {project.name}
-            </h2>
             <a
               target="_blank"
               href={project.siteUrl ? project.siteUrl : project.url}
@@ -39,7 +36,9 @@ function Projects({ title }) {
                 src={project.img}
               />
             </a>
-
+            <h2 className="text-left w-full sm:w-5/12 text-xl mt-2 dark:text-gray-300 font-semibold">
+              {project.name}
+            </h2>
             <p className="w-full text-sm font-light sm:w-5/12  dark:text-gray-300 mt-2">
               {project.desc}
             </p>
@@ -57,6 +56,7 @@ function Projects({ title }) {
             </div>
           </motion.div>
         ))}
+
       <Footer />
     </motion.div>
   );
